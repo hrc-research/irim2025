@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<!--
+	Stellar by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HRC Workshop I-RIM 3D 2025</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+	.info-container {
+			display: flex;
+			align-items: flex-start;
+			gap: 2rem;
+			flex-wrap: wrap;
+		}
+
+		.content {
+			flex: 1 1 400px;
+		}
+
+		.porto-image {
+			flex: 1 1 400px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.porto-image img {
+			max-width: 100%;
+			height: auto;
+			border-radius: 12px; /* opzionale per angoli morbidi */
+			box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* opzionale per un po' di profondità */
+		}
+		.circular-image {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+		.tpc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+		}
+		.tpc-member {
+				padding: 10px;
+				border-left: 4px solid #007acc;
+				background: #f9f9f9;
+				border-radius: 8px;
+				transition: background 0.3s;
+		}
+		.tpc-member:hover {
+				background: #e0f2ff;
+		}
+		.affiliation {
+			font-size: 0.9em;
+			display: block;
+		}
+
+		.subaffiliation {
+			font-size: 0.8em;
+			color: #666;
+			display: block;
+			margin-top: 0.3em;
+		}
+
+		</style>
+		<script>
+			function toggleAbstract(link) {
+				const abstract = document.getElementById('abstractText');
+				const icon = link.querySelector('i');
+				const isVisible = abstract.style.display === 'block';
+				
+				abstract.style.display = isVisible ? 'none' : 'block';
+				icon.className = isVisible ? 'fa fa-chevron-down' : 'fa fa-chevron-up';
+				link.innerHTML = `<i class="${icon.className}" style="margin-right: 6px; transition: transform 0.3s;"></i>${isVisible ? 'Show Abstract' : 'Hide Abstract'}`;
+			}
+		</script>
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+					<p>2025 <a href="https://i-rim.it/it/conferenza-i-rim-3d-2025/">I-RIM 3D Workshop 2025</a></p>
+					<p></p>
+					<i class="fas fa-handshake" style="font-size:60px; color: white; margin-right: 10px;"></i>
+					<i class="fas fa-robot" style="font-size:60px; color: white;"></i> 
+					<!--<span class="logo"><img src="images/logo.svg" alt="" /></span>-->
+					<p></p>
+					<h1>Workshop on "Shared Goals, Shared Spaces: Planning and Control for Trustworthy Human-Robot Collaboration"</h1>
+					<p></p>
+					<p>17-19 October 2025 (Exact day to be defined)</p>
+					<p></p>
+					<!-- <p><a href="https://us06web.zoom.us/j/84427454711?pwd=gGkZ7C1QInylb9fg4u6eXcafIwFrBV.1"  class="button">Join via Zoom!</a></p> -->
+				</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul>
+							<li><a href="#info" >Info</a></li>
+							<li><a href="#content" >Content</a></li>
+							<li><a href="#cfp">Call for Paper</a></li>
+							<li><a href="#speakers">Speakers</a></li>
+							<li><a href="#organizers">Organizers</a></li>
+							<li><a href="#schedule">Schedule</a></li>
+							<li><a href="#contact">Contact</a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Introduction -->
+						<section id="info" class="main">
+							<div class="info-container">
+								<div class="content">
+									<header class="major">
+										<h2>Info</h2>
+									</header>
+									<ul>
+										<li><b>When: </b> 17-19 October, 2025 (Workshop day to be defined)</li>
+										<li><b>Venue: </b> Gazometro Ostiense, Rome, Italy</li>
+										<!--<li><b>Room: </b>  TBD</li>-->
+										<!-- <li><b>Venue: </b> <a href="">Venue</a></li> -->
+										<li><b>Conference Link: </b> <a href="https://i-rim.it/it/conferenza-i-rim-3d-2025/">I-RIM 3D 2025</a></li>
+										<li><b>Submission Deadline:</b> <a href="https://i-rim.it/it/contributi/">September 23, 2025</a></li>
+									</ul>
+								</div>
+						
+								<div class="gazometro-image">
+									<img src="https://i-rim.it/wp-content/uploads/2024/05/gazo.png" alt="Gazometro, Roma">
+								</div>
+							</div>
+						</section>
+
+						<!-- First Section -->
+							<section id="content" class="main">
+								<header class="major">
+									<h2>Content</h2>
+								</header>
+								<p>The workshop will explore the <strong>past, present, and future</strong> of <strong>human-robot collaboration</strong>, focusing on how robots can act not just as <strong>programmable agents</strong>, but as <strong>intelligent partners</strong> able to <strong>understand, anticipate, and adapt</strong> to human behavior in dynamic and unstructured environments. This vision raises fundamental challenges in <strong>planning, learning, and control</strong>, and requires new strategies to ensure <strong>safety</strong> while fostering <strong>trust</strong>, shared goals, and mutual understanding. Through keynote talks, poster pitches (with poster session), and open discussions, the workshop will highlight recent advances toward flexible, <strong>human-aware robotic systems</strong>.</p>
+								<p>These topics are gaining increasing relevance within the emerging paradigm of <strong>Industry 5.0</strong>, where humans are placed at the center and robots are designed to act as capable, trustworthy assistants.</p>								
+								<br/>
+								The workshop will focus on the following topics:
+								<ul> 
+									<li>Human-Aware Planning, Learning, and Control</li>
+									<li>Safety in Human-Robot Collaboration</li>
+									<li>Task and Motion Planning in HRC</li> 
+									<li>Human Factors and Human-in-the-Loop</li> 
+									<li>Human Modeling, Monitoring, and Digital Twins</li> 
+									<li>Generative AI Techniques for Human-Robot Collaboration</li> 
+									<li>Explainable Robot Decision Making</li> 
+									<li>Smart Perception for HRC applications</li> 
+									<li>Multi-Agent Coordination for HRC</li> 
+									<li>Ergonomics, Trust, and Human-Centered Automation</li> 
+								</ul>
+							</section>
+
+
+					<!-- Cfp Section -->
+							<section id="cfp" class="main">
+								<header class="major">
+									<h2>Call for Extended Abstract</h2>
+								</header>
+
+								<p>
+									A specific call for extended abstracts for the workshop will be announced soon. Meanwhile, please find attached the call for extended abstracts of the conference: 
+									<a href="https://i-rim.it/wp-content/uploads/2025/06/Call-for-extended-asbtracts-I-RIM-3D-2025.pdf" target="_blank" rel="noopener noreferrer">
+										I-RIM 3D 2025 Call for Extended Abstracts
+									</a>
+								</p>
+								<h3><b>Important dates</b></h3>
+								Available soon.</br>
+								
+								<!-- <ul>
+									<li>Submission Deadline: <s>May 30</s> <strong>June 9</strong>, 2025</li>
+									<li>Acceptance Notification: <s>June 20</s> July 4, 2025</li>
+									<li>Final Manuscript Deadline: <s>July 4</s> July 15, 2025</li>
+									<li>Workshop Date: to be defined.</li>
+								</ul>
+								Submissions will be reviewed by experts of their respective field. Participants are encouraged to submit their recent work on the topics of interest mentioned above. 
+								<br/> -->
+								<b>More instruction: <a href="https://i-rim.it/it/contributi/"><strong>here</strong></a></b>. 
+								
+								<br/><br/>
+
+							</section>
+
+
+<section id="speakers" class="main" style="background-color: #f9f9f9;">
+<div class="inner">
+    <header class="major">
+        <h2>Speaker</h2>
+    </header>
+		<ul class="tpc-list">
+			<li><strong><a href="https://personale.unimore.it/rubrica/dettaglio/csecchi" target="_blank">Cristian Secchi</a></strong> - University of Modena and Reggio Emilia (<i>Tentative</i> )</li>
+			<li><strong><a href="https://rubrica.unige.it/personale/UkNHWFhr" target="_blank">Fulvio Mastrogiovanni</a></strong> - University of Genova (<i>Tentative</i> )</li>
+			<li><strong><a href="https://webapps.unitn.it/du/it/Persona/PER0239650/Didattica" target="_blank">Matteo Saveriano</a></strong> - University of Trento </li>
+			<li><strong><a href="https://www.ce.cit.tum.de/en/rsi/team/kirschner-robin/" target="_blank">Robin Jeanne Kirschner</a></strong> - Technical University of Munich (<i>Confirmed</i> ) </li>
+			<li><strong><a href="https://www.deib.polimi.it/ita/personale/dettagli/2048606" target="_blank">Marco Faroni</a></strong> - Politecnico di Milano (<i>Confirmed</i> ) </li>
+		</ul>
+	</div>
+</section>
+<section id="organizers" class="main">
+	<div class="inner">
+	<header class="major">
+		<h2>Organizers</h2>
+
+	</header>
+
+	<ul class="features">
+		<li><img src="images/ssamuele.jpeg">
+			<h3><a href="https://www.researchgate.net/profile/Samuele-Sandrini">Samuele Sandrini</a></h3>
+			<p>
+				<span class="affiliation">Consiglio Nazionale delle Ricerche (CNR)</span>
+				<span class="subaffiliation">STIIMA Institute</span>
+			</p>
+		</li>
+	
+		<li><img src="images/ctonola.jpeg">
+			<h3><a href="https://www.stiima.cnr.it/ricercatori/tonola-cesare/">Cesare Tonola</a></h3>
+			<p>
+				<span class="affiliation">Consiglio Nazionale delle Ricerche (CNR)</span>
+				<span class="subaffiliation">STIIMA Institute</span>
+			</p>
+		</li>
+	
+		<li><img src="https://scientilla.iit.it/api/v1/users/username/marta.lagomarsino@iit.it/profile-image">
+			<h3><a href="https://www.iit.it/it/people-details/-/people/marta-lagomarsino/">Marta Lagomarsino</a></h3>
+			<p>
+				<span class="affiliation">Istituto Italiano di Tecnologia</span>
+				<span class="subaffiliation">Human-Robot Interfaces and Interaction Laboratory</span>
+			</p>
+		</li>
+	
+		<li><img src="http://www.arscontrol.unimore.it/wp-content/uploads/2024/02/andreapupa.jpg">
+			<h3><a href="https://www.arscontrol.unimore.it/andrea-pupa/">Andrea Pupa</a></h3>
+			<p>
+				<span class="affiliation">Università di Modena e Reggio Emilia</span>
+				<span class="subaffiliation">Automation, Robotics and System Control (ARS Group)</span>
+			</p>
+		</li>
+	</ul>
+	
+		
+	</div>
+</section>
+						</section>
+												<!-- Second Section -->
+												<section id="schedule" class="main">
+							
+							
+													<header class="major">
+															<h2>Schedule</h2>
+															The schedule will be available soon.
+													
+													
+													<!-- <table id="schedule_tab">
+														<tr>
+															<th>Time</th>
+															<th>Activity</th>
+														</tr>
+														<tr>
+															<td>10:00 - 10:10</td>
+															<td>Welcome </td>
+														</tr>
+														<tr>
+															<td>10:10 - 10:40</td>
+															<td> <b>Weitiang Wang</b>, Montclair State University, USA
+															</td>
+														</tr>
+														<tr>
+															<td>10:40 - 11:10</td>
+															<td> <b>Arash Ajoudani</b>, Italian Institute of Technology (IIT), Italy
+															</td>
+														</tr>
+														<tr>
+															<td>11:10 - 11:30</td>
+															<td> Spotlight Talks
+															</td>
+														</tr>		
+														<tr>
+															<td>11:30 - 12:00</td>
+															<td> Coffee Break & Poster Presentation
+															</td>
+														</tr>		
+														<tr>
+															<td>12:00 - 12:30</td>
+															<td> <b>Aurélie Clodic</b>, National Centre for Scientific Research (CNRS), France
+															</td>
+														</tr>
+														<tr>
+															<td>12:30 - 13:00</td>
+															<td> <b>Loris Roveda</b>, Dalle Molle Institute for Artificial Intelligence (IDSIA USI-SUPSI), Switzerland
+															</td>
+														</tr>
+														<tr>
+															<td>13:00 - 13:15</td>
+															<td> Closing Remarks
+															</td>
+														</tr>		 -->
+														<!--
+														<tr>
+															<td>11:20 - 11.40</td>
+															<td> <b> Coffee break </b>
+															</td>
+														</tr>
+														-->
+														
+														<!--
+														<tr>
+															<td>13:20 – 13:30</td>
+															<td>Closing remarks</td>
+														</tr>
+													</table>
+													-->
+												</section>
+						
+
+							
+							<section id="contact" class="main special">
+							<div class="inner">
+							<header class="major">
+									<h2>Contacts</h2>
+									<div style="text-align: left;">
+										<ul>
+											<li>Samuele Sandrini: <b>samuele.sandrini (AT) stiima.cnr.it</b></li>
+											<li>Cesare Tonola: <b>cesare.tonola (AT) stiima.cnr.it</b></li>
+											<li>Marta Lagomarsino: <b>marta.lagomarsino (AT) iit.it</b></li>
+											<li>Andrea Pupa: <b>andrea.pupa (AT) unimore.it</b></li>
+										</ul>
+									</div>
+								</div>
+							
+								</header>
+						</section>
+
+
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+						
+						<p class="copyright">&copy; Workshop at I-RIM 3D 2025. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
