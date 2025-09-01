@@ -14,6 +14,99 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<style>
+			.speakers-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 2rem;
+				display: grid;
+				justify-content: center; /* 🔥 centra le card anche se la riga non è piena */
+
+			}
+			
+			.speaker-card {
+				background: #fff;
+				border-radius: 15px;
+				padding: 1.5rem;
+				box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+				text-align: center;
+				transition: transform 0.2s;
+			}
+			.speaker-card:hover {
+				transform: translateY(-5px);
+			}
+			
+			.speaker-card img {
+				width: 120px;
+				height: 120px;
+				object-fit: cover;
+				border-radius: 50%;
+				margin-bottom: 1rem;
+				border: 3px solid #eee;
+			}
+			
+			.speaker-card h3 {
+				margin: 0.5rem 0;
+				font-size: 1.2rem;
+			}
+			
+			.speaker-card .affiliation {
+				font-size: 0.9rem;
+				color: #555;
+			}
+			
+			.speaker-card .talk-title {
+				margin: 0.5rem 0 1rem;
+				font-weight: bold;
+				color: #333;
+			}
+			
+		#main .abstract-btn {
+			background: linear-gradient(135deg, #007acc, #005fa3);
+			color: white !important;
+			border: none;
+			padding: 0.6rem 1.2rem;
+			border-radius: 30px;
+			cursor: pointer;
+			font-size: 0.9rem;
+			font-weight: 500;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+			transition: all 0.3s ease;
+		}
+
+		#main .abstract-btn:hover {
+		background: linear-gradient(135deg, #005fa3, #004080);
+		transform: translateY(-2px);
+		box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+		}
+
+		#main .abstract-btn:active {
+		transform: scale(0.97);
+		}
+
+			
+			.abstract {
+				margin-top: 1rem;
+				font-size: 0.9rem;
+				text-align: justify;
+				/* justify-content: center; */
+
+			}
+			.hidden {
+				display: none;
+			}
+			</style>
+			
+			<script>
+			function toggleAbstract(button) {
+				const abstract = button.nextElementSibling;
+				abstract.classList.toggle('hidden');
+				button.textContent = abstract.classList.contains('hidden') ? "Read Abstract" : "Hide Abstract";
+			}
+			</script>
+		<style>
 	.info-container {
 			display: flex;
 			align-items: flex-start;
@@ -78,7 +171,7 @@
 
 
 		</style>
-		<script>
+		<!-- <script>
 			function toggleAbstract(link) {
 				const abstract = document.getElementById('abstractText');
 				const icon = link.querySelector('i');
@@ -88,7 +181,7 @@
 				icon.className = isVisible ? 'fa fa-chevron-down' : 'fa fa-chevron-up';
 				link.innerHTML = `<i class="${icon.className}" style="margin-right: 6px; transition: transform 0.3s;"></i>${isVisible ? 'Show Abstract' : 'Hide Abstract'}`;
 			}
-		</script>
+		</script> -->
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
@@ -206,20 +299,76 @@
 							</section>
 
 
-<section id="speakers" class="main" style="background-color: #f9f9f9;">
-<div class="inner">
-    <header class="major">
-        <h2>Speaker</h2>
-    </header>
-		<ul class="tpc-list">
-			<li><strong>Prof. <a href="https://personale.unimore.it/rubrica/dettaglio/csecchi" target="_blank">Cristian Secchi</a></strong> - University of Modena and Reggio Emilia (<i>Confirmed</i> )</li>
-			<li><strong>Prof. <a href="https://rubrica.unige.it/personale/UkNHWFhr" target="_blank">Fulvio Mastrogiovanni</a></strong> - University of Genova (<i>Confirmed</i> )</li>
-			<li><strong>Prof. <a href="https://webapps.unitn.it/du/it/Persona/PER0239650/Didattica" target="_blank">Matteo Saveriano</a></strong> - University of Trento (<i>Confirmed</i> )</li>
-			<li><strong><a href="https://www.ce.cit.tum.de/en/rsi/team/kirschner-robin/" target="_blank">Robin Jeanne Kirschner</a></strong> - Technical University of Munich (<i>Confirmed</i> ) </li>
-			<li><strong>Dr. <a href="https://www.deib.polimi.it/ita/personale/dettagli/2048606" target="_blank">Marco Faroni</a></strong> - Politecnico di Milano (<i>Confirmed</i> ) </li>
-		</ul>
-	</div>
-</section>
+							<section id="speakers" class="main" style="background-color: #f9f9f9; padding: 3rem 1rem;">
+								<div class="inner">
+									<header class="major">
+										<h2>Speakers</h2>
+									</header>
+							
+									<div class="speakers-grid">
+
+										
+										<div class="speaker-card">
+											<img src="images/robin_kirschner.png" alt="Robin Kirschner">
+											<h3><a href="https://www.ce.cit.tum.de/rsi/team/kirschner-robin/" target="_blank">Robin Kirschner</a></h3>
+											<p class="affiliation">Technical University of Munich – MIRMI</p>
+											<p class="talk-title">"Defining the tactility of robots – the basic step towards inherently safe robotics"</p>
+											<!-- <button class="abstract-btn" onclick="toggleAbstract(this)">Read Abstract</button>
+											<div class="abstract hidden">
+												<p>Qui puoi inserire un breve abstract fornito dallo speaker. Può essere lungo quanto vuoi, si apre a fisarmonica sotto la card.</p>
+											</div> -->
+										</div>
+
+										<div class="speaker-card">
+											<img src="https://matteosaveriano.weebly.com/uploads/1/2/1/9/121918373/published/portrait-picture_1.jpg?1561050701" alt="Matteo Saveriano">
+											<h3>Prof. <a href="https://matteosaveriano.weebly.com/" target="_blank">Matteo Saveriano</a></h3>
+											<p class="affiliation">Università di Trento</p>
+											<p class="talk-title">"Energy-Aware Learning-Control for Human-Robot Collaboration"</p>
+											<button class="abstract-btn" onclick="toggleAbstract(this)">Read Abstract</button>
+											<div class="abstract hidden">
+												<p>Robotic manipulation demands for sophisticated control policies and accurate management of the forces exchanged with the environment. While learning-based controllers have shown a great potential in learning complex policies, safety guarantees during the learning and execution phases are still missing. In this talk, I will present recent results on stability- and passivity-based learning-control and its application in robotic manipulation.</p>
+											</div>
+										</div>
+										
+										<div class="speaker-card">
+											<img src="https://marco-faroni.github.io/images/marco_squared.jpg" alt="Marco Faroni">
+											<h3><a href="https://marco-faroni.github.io/" target="_blank">Marco Faroni</a></h3>
+											<p class="affiliation">Politecnico di Milano</p>
+											<p class="talk-title">"Safery-aware decision making for human robot collaboration"</p>
+											<!-- <button class="abstract-btn" onclick="toggleAbstract(this)">Read Abstract</button>
+											<div class="abstract hidden">
+												<p>Qui puoi inserire un breve abstract fornito dallo speaker. Può essere lungo quanto vuoi, si apre a fisarmonica sotto la card.</p>
+											</div> -->
+										</div>
+
+										<!-- Replicare per ogni speaker -->
+										<div class="speaker-card">
+											<img src="https://rubrica.unige.it/static/foto/UkNHWFhr.jpg?1756304946.8947" alt="Fulvio Mastrogiovanni">
+											<h3>Prof. <a href="https://dibris.unige.it/fulvio.mastrogiovanni%40unige.it" target="_blank">Fulvio Mastrogiovanni</a></h3>
+											<p class="affiliation">University of Genova</p>
+											<p class="talk-title"></p>
+											<!-- <button class="abstract-btn" onclick="toggleAbstract(this)">Read Abstract</button>
+											<div class="abstract hidden">
+												<p>Abstract della presentazione di Mastrogiovanni...</p>
+											</div> -->
+										</div>
+										
+										<!-- Speaker Card -->
+										<div class="speaker-card" style="padding-top:10px;">
+											<img src="https://personale.unimore.it/foto.aspx?id=4526" alt="Cristian Secchi">
+											<h3>Prof. <a href="https://personale.unimore.it/rubrica/dettaglio/csecchi" target="_blank">Cristian Secchi</a></h3>
+											<p class="affiliation">University of Modena and Reggio Emilia</p>
+											<p class="talk-title"></p>
+											<!-- <button class="abstract-btn" onclick="toggleAbstract(this)">Read Abstract</button> -->
+											<!-- <div class="abstract hidden">
+												<p>Qui puoi inserire un breve abstract fornito dallo speaker. Può essere lungo quanto vuoi, si apre a fisarmonica sotto la card.</p>
+											</div> -->
+										</div>
+							
+										
+									</div>
+								</div>
+							</section>
 <section id="organizers" class="main">
 	<div class="inner">
 	<header class="major">
